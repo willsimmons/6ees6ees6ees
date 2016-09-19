@@ -1,7 +1,22 @@
-import Bee from './Bee'
+import Bee from './Bee';
 
-class HoneyMakerBee {
-  // TODO..
-};
+class HoneyMakerBee extends Bee {
+  
+  constructor() {
+    super();
+    this.age = 10;
+    this.job = 'make honey';
+    this.honeyPot = 0;
+  }
+  
+  makeHoney() {
+    return this.honeyPot++;
+  }
+
+  giveHoney() {
+    return this.honeyPot--;
+  }
+
+}
 
 export default HoneyMakerBee;
